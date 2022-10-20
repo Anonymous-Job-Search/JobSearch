@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  web:
+    build:
+      context: web
+      dockerfile: Dockerfile
+    command: sh -c "pnpm i --frozen-lockfile && pnpm dev"
+    tty: true
+    user: node
+    volumes:
+      - ./web:/home/node/app
