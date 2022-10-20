@@ -1,5 +1,7 @@
 # Anonymous Job Search - WEB
 
+[http://localhost:8080/](http://localhost:8080/)
+
 ## Technologies, tools and architecture
 
 - [Node 19.x](https://github.com/nodejs/node/blob/main/doc/changelogs/CHANGELOG_V19.md#)

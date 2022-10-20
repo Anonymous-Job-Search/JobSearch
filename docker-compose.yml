@@ -5,8 +5,10 @@ services:
     build:
       context: web
       dockerfile: Dockerfile
-    command: sh -c "pnpm i --frozen-lockfile && pnpm dev"
+    command: sh -c "pnpm i --frozen-lockfile && pnpm dev --host 0.0.0.0 --port 8080"
     tty: true
     user: node
     volumes:
       - ./web:/home/node/app
+    ports:
+      - "8080:8080"
