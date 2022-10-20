@@ -1,0 +1,8 @@
+web:
+  - "web/**/*"
+
+js-test:
+  - "**/*.spec.js"
+
+js-deps:
+  - "**/*/pnpm-lock.yaml"
