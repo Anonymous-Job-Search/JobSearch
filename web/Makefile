@@ -1,11 +1,11 @@
-logs:
-	docker-compose logs -f web
-
 up:
 	docker-compose up -d
 
 down:
 	docker-compose down
+
+logs:
+	docker-compose logs -f web
 
 sh:
 	docker-compose exec web sh

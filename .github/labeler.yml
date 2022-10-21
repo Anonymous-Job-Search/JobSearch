@@ -1,3 +1,6 @@
+backend:
+  - "backend/**/*"
+
 web:
   - "web/**/*"
 

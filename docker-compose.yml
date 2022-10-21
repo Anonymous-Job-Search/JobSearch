@@ -1,14 +1,44 @@
 version: "3.9"
 
 services:
+  proxy:
+    image: nginx:1.23-alpine
+    working_dir: /etc/nginx
+    volumes:
+      - ./.docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./.docker/nginx/ca.crt:/etc/nginx/ssl/ca.crt
+      - ./.docker/nginx/ca-key.key:/etc/nginx/ssl/ca-key.key
+    depends_on:
+      - backend
+      - web
+    networks:
+      - backend
+      - frontend
+    ports:
+      - "443:443"
+
+  backend:
+    image: mcr.microsoft.com/dotnet/sdk:6.0-alpine
+    working_dir: /app
+    command: dotnet watch run --urls "http://0.0.0.0:7293"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ./backend:/app
+    networks:
+      - backend
+
   web:
     build:
       context: web
-      dockerfile: Dockerfile
     command: sh -c "pnpm i --frozen-lockfile && pnpm dev --host 0.0.0.0 --port 8080"
     tty: true
     user: node
     volumes:
       - ./web:/home/node/app
-    ports:
-      - "8080:8080"
+    networks:
+      - frontend
+
+networks:
+  backend:
+  frontend:
