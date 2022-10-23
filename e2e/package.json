@@ -1,0 +1,14 @@
+{
+  "name": "@anonymous-job-search/e2e",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "playwright test",
+    "report": "playwright show-report"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.27.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.3"
+  }
+}
