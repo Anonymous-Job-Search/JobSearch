@@ -19,6 +19,6 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   rules: {
-    yoda: ['error', 'always'],
+    yoda: ['error', 'never'],
   },
 };
