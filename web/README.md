@@ -8,7 +8,6 @@
 - [Typescript + TSX](https://github.com/vitejs/vite/tree/main/packages/plugin-vue-jsx)
 - [Vue store via Pinia](https://pinia.vuejs.org/)
 - [Unit test via Vitest](https://vitest.dev/)
-- [E2E test via Cypress](https://www.cypress.io/)
 - [Static code analysis via ESLint](https://eslint.org/)
 - [Code formatter via Prettier](https://prettier.io/)
 - [CSS linter via Stylelint](https://stylelint.io/)
@@ -42,7 +41,3 @@ make test-unit
 make test-unit-coverage
 make test-unit-watch
 ```
-
-## TODO
-
-- Install Cypress
