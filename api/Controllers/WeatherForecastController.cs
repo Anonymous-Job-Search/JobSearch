@@ -1,17 +1,11 @@
 namespace JobSearch.Controllers;
 
-using System.Text;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 [ApiController]
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-    private readonly ILogger<WeatherForecastController> _logger;
-
-    public WeatherForecastController(ILogger<WeatherForecastController> logger) => this._logger = logger;
-
     [HttpGet(Name = "GetExample")]
     public IActionResult GetExample()
     {
@@ -49,20 +43,20 @@ public class WeatherForecastController : ControllerBase
         }
 
         // Gets and prints all books in database
-        using (var context = new LibraryContext())
-        {
-            var books = context.Book
-                .Include(p => p.Publisher);
-
-            foreach (var book in books)
-            {
-                var data = new StringBuilder();
-                data.AppendLine($"ISBN: {book.ISBN}");
-                data.AppendLine($"Title: {book.Title}");
-                data.AppendLine($"Publisher: {book.Publisher.Name}");
-                Console.WriteLine(data.ToString());
-            }
-        }
+        // using (var context = new LibraryContext())
+        // {
+        //     var books = context.Book
+        //         .Include(p => p.Publisher);
+        //
+        //     foreach (var book in books)
+        //     {
+        //         var data = new StringBuilder();
+        //         data.AppendLine($"ISBN: {book.ISBN}");
+        //         data.AppendLine($"Title: {book.Title}");
+        //         data.AppendLine($"Publisher: {book.Publisher.Name}");
+        //         Console.WriteLine(data.ToString());
+        //     }
+        // }
 
         return this.Ok();
     }

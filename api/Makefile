@@ -11,4 +11,4 @@ sh:
 	docker-compose exec api sh
 
 lint:
-	docker-compose exec api dotnet format JobSearch.sln --verbosity diagnostic
+	docker-compose exec api dotnet format JobSearch.sln --verbosity detailed
