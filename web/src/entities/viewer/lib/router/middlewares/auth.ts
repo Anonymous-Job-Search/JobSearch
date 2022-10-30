@@ -2,7 +2,7 @@ import type {NavigationGuardWithThis, NavigationHookAfter, RouteLocationNormaliz
 
 // NavigationGuardWithThis
 export const useBeforeEachAuthMiddleware = (guard: RouteLocationNormalized) => {
-  if (guard.meta in AUTH) {
-    // TODO check store
-  }
+  // if (guard.meta in AUTH) {
+  //   // TODO check store
+  // }
 }
