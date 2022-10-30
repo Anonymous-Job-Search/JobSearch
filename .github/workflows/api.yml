@@ -1,0 +1,27 @@
+name: "Api"
+
+on:
+  push:
+    paths:
+      - 'api/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: api
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '6.0.x'
+
+      - run: dotnet restore
+      - run: dotnet format JobSearch.sln --verify-no-changes --verbosity diagnostic
+      - run: dotnet build --configuration Release --no-restore
+      - run: dotnet test --no-restore --verbosity normal
