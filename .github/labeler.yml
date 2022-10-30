@@ -1,11 +1,14 @@
-backend:
-  - "backend/**/*"
+api:
+  - "api/**/*"
 
 web:
   - "web/**/*"
 
+e2e:
+  - "e2e/**/*"
+
 js-test:
-  - "**/*.spec.js"
+  - "**/*.spec.(js|ts)"
 
 js-deps:
   - "**/*/pnpm-lock.yaml"

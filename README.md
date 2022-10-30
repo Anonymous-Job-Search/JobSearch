@@ -1,6 +1,7 @@
 # Anonymous Job Search
 
-[https://jobs.localhost](https://jobs.localhost)
+- WEB: [jobs.localhost](https://jobs.localhost)
+- API: [api.jobs.localhost](https://api.jobs.localhost) ([swagger](https://api.jobs.localhost/swagger))
 
 ## Installation
 
@@ -12,7 +13,7 @@
 # sudo trust anchor $(mkcert -CAROOT)/rootCA.pem
 
 mkcert -install
-mkcert -cert-file ./.docker/nginx/ca.crt -key-file ./.docker/nginx/ca-key.key jobs.localhost
+mkcert -cert-file ./.docker/nginx/ssl/ca.crt -key-file ./.docker/nginx/ssl/ca-key.key jobs.localhost "*.jobs.localhost"
 ```
 
 Now run `make up`.
