@@ -1,8 +1,8 @@
-import type {NavigationGuardWithThis, NavigationHookAfter, RouteLocationNormalized} from "vue-router";
+import type { RouteLocationNormalized } from 'vue-router';
 
-// NavigationGuardWithThis
+// eslint-disable-next-line
 export const useBeforeEachAuthMiddleware = (guard: RouteLocationNormalized) => {
   // if (guard.meta in AUTH) {
   //   // TODO check store
   // }
-}
+};

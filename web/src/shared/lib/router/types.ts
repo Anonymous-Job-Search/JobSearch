@@ -1,2 +1,2 @@
-export type USER = "user"
-export type VIEWER = "viewer"
+export type USER = 'user';
+export type VIEWER = 'viewer';

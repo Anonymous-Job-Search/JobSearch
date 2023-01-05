@@ -1,2 +1,2 @@
-import AuthLogin from './ui.vue'
-export { AuthLogin }
+import AuthLogin from './ui.vue';
+export { AuthLogin };

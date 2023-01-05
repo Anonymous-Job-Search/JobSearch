@@ -6,6 +6,7 @@
   ],
   "rules": {
     "string-quotes": "double",
-    "selector-class-pattern": null
+    "selector-class-pattern": null,
+    "max-nesting-depth": null
   }
 }
