@@ -17,13 +17,16 @@ services:
       - "443:443"
 
   api:
-    image: mcr.microsoft.com/dotnet/sdk:6.0-alpine
+    image: mcr.microsoft.com/dotnet/sdk:7.0-alpine
     working_dir: /app
-    command: dotnet watch run --urls "http://0.0.0.0:7293"
+    command: sh -c "dotnet tool install --global dotnet-ef && dotnet restore && dotnet watch run --urls 'http://0.0.0.0:7293'"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      - PATH="$PATH:/root/.dotnet/tools"
     volumes:
       - ./api:/app
+    depends_on:
+      - database
     networks:
       - backend
 
