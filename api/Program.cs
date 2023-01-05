@@ -1,3 +1,5 @@
+#pragma warning disable CA1852
+
 const string policyName = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
 
