@@ -3,11 +3,11 @@
 </script>
 
 <template>
-
-<div>
-
-  ololo
-</div>
+  <Header/>
+  <main>
+    <NuxtPage />
+  </main>
+  <Footer/>
 </template>
 
 <style scoped>
