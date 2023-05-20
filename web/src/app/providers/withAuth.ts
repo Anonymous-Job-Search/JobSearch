@@ -1,8 +1,6 @@
 // TODO init auth
 
-export const auth = () => {
-
-}
+export const auth = () => {};
 
 // no auth => auth page (profile)
 // check localStorage

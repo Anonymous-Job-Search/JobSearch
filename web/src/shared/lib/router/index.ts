@@ -1,4 +1,4 @@
 // public api
-import routes from './routes'
+import routes from './routes';
 
-export { routes }
+export { routes };
