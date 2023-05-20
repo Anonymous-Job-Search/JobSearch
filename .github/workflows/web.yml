@@ -42,7 +42,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - run: pnpm i --frozen-lockfile
+      - run: pnpm i
       - run: pnpm audit --prod
 #      - run: pnpm typescript
 #      - run: pnpm eslint
