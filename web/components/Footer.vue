@@ -3,9 +3,7 @@
 </script>
 
 <template>
-<div>
-  ololo
-</div>
+  Footer
 </template>
 
 <style scoped>

@@ -3,11 +3,7 @@
 </script>
 
 <template>
-
-<div>
-
-  ololo
-</div>
+  header
 </template>
 
 <style scoped>

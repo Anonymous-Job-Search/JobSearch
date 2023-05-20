@@ -3,11 +3,7 @@
 </script>
 
 <template>
-
-<div>
-
-  ololo
-</div>
+one
 </template>
 
 <style scoped>
