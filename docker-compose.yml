@@ -44,7 +44,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: jobs
     ports:
-      - "3306:3306"
+      - "3307:3306"
     networks:
       - backend
 

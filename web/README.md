@@ -1,35 +1,42 @@
-# Anonymous Job Search - WEB
+# Nuxt 3 Minimal Starter
 
-## Development
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-```shell
-# Run/Stop project
-make up
-make down
+## Setup
 
-# Show logs
-make logs
+Make sure to install the dependencies:
 
-# Open docker container
-make sh
+```bash
+# yarn
+yarn install
 
-# Production build
-make build
+# npm
+npm install
 
-# Run linters
-make lint
-make typescript
-make eslint
-make prettier
-make stylelint
-
-# Run tests
-make test
-make test-coverage
-make test-unit
-make test-unit-coverage
-make test-unit-watch
-
-# Execute pnpm binary inside a container
-./pnpm [command]
+# pnpm
+pnpm install
 ```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`
+
+```bash
+npm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
