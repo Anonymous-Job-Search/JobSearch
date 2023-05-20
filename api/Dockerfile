@@ -1,20 +1,8 @@
-FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+FROM golang:1.20-alpine
+
+RUN apk add --no-cache git
+RUN go install github.com/cosmtrek/air@latest
+
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
-WORKDIR /src
-COPY ["JobSearch.csproj", "./"]
-RUN dotnet restore "JobSearch.csproj"
-COPY . .
-WORKDIR "/src/"
-RUN dotnet build "JobSearch.csproj" -c Release -o /app/build
-
-FROM build AS publish
-RUN dotnet publish "JobSearch.csproj" -c Release -o /app/publish
-
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "JobSearch.dll"]
+EXPOSE 3000

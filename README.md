@@ -21,7 +21,7 @@
 # sudo trust anchor $(mkcert -CAROOT)/rootCA.pem
 
 mkcert -install
-mkcert -cert-file ./.docker/nginx/ssl/ca.crt -key-file ./.docker/nginx/ssl/ca-key.key jobs.localhost "*.jobs.localhost"
+mkcert -cert-file ./.docker/nginx/ssl/ca.crt -key-file ./.docker/nginx/ssl/ca-key.key jobs.localhost
 ```
 
 ## Development
@@ -46,16 +46,13 @@ make logs
 
 **API**
 
-- [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
-- [ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-6.0)
-- [Entity Framework](https://learn.microsoft.com/en-us/ef/)
-- [Domain-Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design)
+- TODO
 
 **WEB**
 
 - [Node 19.x](https://github.com/nodejs/node/blob/main/doc/changelogs/CHANGELOG_V19.md)
+- [Nuxt.js 3.x](https://github.com/nuxt/nuxt)
 - [Vue 3 + Composition API](https://github.com/vuejs/core)
-- [Feature-Sliced Design](https://feature-sliced.design/)
 - [BEM Methodology](https://en.bem.info/methodology/quick-start/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Pinia - Vue Store](https://pinia.vuejs.org/)

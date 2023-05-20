@@ -17,11 +17,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - uses: actions/setup-dotnet@v3
+      - uses: actions/setup-go@v4
         with:
-          dotnet-version: '7.0.x'
+          go-version: '1.20'
 
-      - run: dotnet restore
-      - run: dotnet format JobSearch.sln --verify-no-changes --verbosity diagnostic
-      - run: dotnet build --configuration Release --no-restore
-      - run: dotnet test --no-restore --verbosity normal
+      - name: Install golint
+        run: go install golang.org/x/lint/golint@latest
+
+      - run: go mod verify
+      - run: golint .
+      - run: go vet .
+      - run: go fmt .
+      - run: go test -v
+      - run: go build -v .

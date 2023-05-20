@@ -13,9 +13,6 @@ make logs
 # Open docker container
 make sh
 
-# Run linters
-make lint
-
-# Execute dotnet binary inside a container
-./dotnet [command]
+# Execute go binary inside a container
+./go [command]
 ```

@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   proxy:
-    image: nginx:1.23-alpine
+    image: nginx:1.24-alpine
     working_dir: /etc/nginx
     volumes:
       - ./.docker/nginx/nginx.conf:/etc/nginx/nginx.conf
@@ -17,12 +17,9 @@ services:
       - "443:443"
 
   api:
-    image: mcr.microsoft.com/dotnet/sdk:7.0-alpine
-    working_dir: /app
-    command: sh -c "dotnet tool install --global dotnet-ef && dotnet restore && dotnet watch run --urls 'http://0.0.0.0:7293'"
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - PATH="$PATH:/root/.dotnet/tools"
+    build:
+      context: api
+    command: sh -c "go mod vendor && air"
     volumes:
       - ./api:/app
     depends_on:
