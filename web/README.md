@@ -1,43 +1,42 @@
-# Anonymous Job Search - WEB
+# Nuxt 3 Minimal Starter
 
-## Technologies, tools and architecture
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-- [Node 19.x](https://github.com/nodejs/node/blob/main/doc/changelogs/CHANGELOG_V19.md#)
-- [Feature-Sliced Design](https://feature-sliced.design/)
-- [Vue 3 + Composition API](https://vuejs.org/guide/introduction.html)
-- [Typescript + TSX](https://github.com/vitejs/vite/tree/main/packages/plugin-vue-jsx)
-- [Vue store via Pinia](https://pinia.vuejs.org/)
-- [Unit test via Vitest](https://vitest.dev/)
-- [Static code analysis via ESLint](https://eslint.org/)
-- [Code formatter via Prettier](https://prettier.io/)
-- [CSS linter via Stylelint](https://stylelint.io/)
+## Setup
 
-## Development
+Make sure to install the dependencies:
 
-```shell
-# Run project
-make up
+```bash
+# yarn
+yarn install
 
-# Stop project
-make down
+# npm
+npm install
 
-# Show logs
-make logs
-
-# Build production
-make build
-
-# Run linters
-make lint
-make typescript
-make eslint
-make prettier
-make stylelint
-
-# Run tests
-make test
-make test-coverage
-make test-unit
-make test-unit-coverage
-make test-unit-watch
+# pnpm
+pnpm install
 ```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`
+
+```bash
+npm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
