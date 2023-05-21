@@ -33,6 +33,9 @@ services:
     command: sh -c "pnpm i && pnpm dev --host 0.0.0.0 --port 8080"
     tty: true
     user: node
+    expose:
+      - 8080
+      - 8081
     environment:
       - HMR_HOST=0.0.0.0
       - HMR_PROTOCOL=wss

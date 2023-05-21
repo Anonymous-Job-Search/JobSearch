@@ -19,29 +19,23 @@ build:
 lint:
 	docker-compose exec web pnpm lint:fix
 
-typescript:
-	docker-compose exec web pnpm typescript
+typecheck:
+	docker-compose exec web pnpm typecheck
 
-eslint:
-	docker-compose exec web pnpm eslint:fix
-
-prettier:
-	docker-compose exec web pnpm prettier:fix
-
-stylelint:
-	docker-compose exec web pnpm stylelint:fix
+#eslint:
+#	docker-compose exec web pnpm eslint:fix
+#
+#prettier:
+#	docker-compose exec web pnpm prettier:fix
+#
+#stylelint:
+#	docker-compose exec web pnpm stylelint:fix
 
 test:
 	docker-compose exec web pnpm test
 
+test-watch:
+	docker-compose exec web pnpm test:watch
+
 test-coverage:
 	docker-compose exec web pnpm test:coverage
-
-test-unit:
-	docker-compose exec web pnpm test:unit
-
-test-unit-coverage:
-	docker-compose exec web pnpm test:unit:coverage
-
-test-unit-watch:
-	docker-compose exec web pnpm test:unit:watch

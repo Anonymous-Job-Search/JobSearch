@@ -44,9 +44,9 @@ jobs:
 
       - run: pnpm i
       - run: pnpm audit --prod
-#      - run: pnpm typescript
+      - run: pnpm typecheck
 #      - run: pnpm eslint
 #      - run: pnpm prettier
 #      - run: pnpm stylelint
-#      - run: pnpm test
+      - run: pnpm test
       - run: pnpm build
