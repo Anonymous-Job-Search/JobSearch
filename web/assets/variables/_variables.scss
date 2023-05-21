@@ -1,0 +1,53 @@
+@import "media";
+/* main variables */
+$min-width: 320px;
+$base-bg: #efeef3;
+$max-width: 1175px;
+$base-font-size: 14px;
+$base-line-height: 30px;
+$base-font-family: 'Roboto', sans-serif;
+$article-font-family: 'Roboto', sans-serif;
+$small-font-size: 13px;
+
+//transition
+$default-transition: all 0.3s linear;
+$btn-transition: all ease 0.3s;
+
+
+//colors
+$white: #ffffff;
+$black: #141414;
+$violet: #100817;
+$grey: #c6c6c6;
+$grey_middle: #dddce6;
+$grey_blue_background: #efeef3;
+$grey_light: #efeef3;
+$grey_dark: #959595;
+$red: #ec1c24;
+//gradients
+
+
+
+
+//shadows
+
+
+//hover colors
+
+//text, titles
+$text-color: $black;
+$title-color: $black;
+$title-font-family: $base-font-family;
+
+$font-size-h1: 35px;
+$line-height-h1: 50px;
+$font-size-h2: 30px;
+$line-height-h2: 40px;
+$font-size-h3: 25px;
+$line-height-h3: 35px;
+$font-size-h4: 24px;
+$line-height-h4: 30px;
+$font-size-h5: 20px;
+$line-height-h5: 28px;
+$font-size-h6: 18px;
+$line-height-h6: 24px;

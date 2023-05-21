@@ -2,7 +2,15 @@ import {HmrOptions} from "vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  css: ["@/assets/style.scss"],
   vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "@/assets/variables/_variables.scss" as *;'
+        }
+      }
+    },
     server: {
       hmr: Object.fromEntries(Object.entries({
         host: process.env.HMR_HOST,
