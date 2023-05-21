@@ -1,19 +1,13 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <header class="main-navigation">
     <div class="container">
-      <div class="main-navigation-logo">
-        logo
-      </div>
-      <nav >
+      <div class="main-navigation-logo">logo</div>
+      <nav>
         <ul class="main-navigation__list">
           <li class="main-navigation__list-item">
-            <NuxtLink to="/registration">
-              registration
-            </NuxtLink>
+            <NuxtLink to="/registration"> registration </NuxtLink>
           </li>
         </ul>
       </nav>
@@ -30,7 +24,6 @@
   background-color: $grey;
   &__list {
     list-style: none;
-
   }
 }
 </style>

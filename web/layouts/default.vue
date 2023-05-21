@@ -1,15 +1,13 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
-<!--  <NuxtWelcome/>-->
+  <!--  <NuxtWelcome/>-->
 
   <NavigationMainNavigation />
   <main>
     <NuxtPage />
   </main>
-  <Footer/>
+  <Footer />
 </template>
 
 <style lang="scss">

@@ -1,13 +1,9 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="container">
-    <AuthRegistrartion/>
+    <AuthRegistrartion />
   </div>
 </template>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

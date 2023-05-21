@@ -22,14 +22,14 @@ lint:
 typecheck:
 	docker-compose exec web pnpm typecheck
 
-#eslint:
-#	docker-compose exec web pnpm eslint:fix
-#
-#prettier:
-#	docker-compose exec web pnpm prettier:fix
-#
-#stylelint:
-#	docker-compose exec web pnpm stylelint:fix
+eslint:
+	docker-compose exec web pnpm eslint:fix
+
+prettier:
+	docker-compose exec web pnpm prettier:fix
+
+stylelint:
+	docker-compose exec web pnpm stylelint:fix
 
 test:
 	docker-compose exec web pnpm test

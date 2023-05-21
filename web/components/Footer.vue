@@ -1,10 +1,5 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <footer>
-    Footer
-  </footer>
+  <footer>Footer</footer>
 </template>
-
