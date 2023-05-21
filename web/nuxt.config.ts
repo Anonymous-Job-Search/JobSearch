@@ -2,7 +2,10 @@ import {HmrOptions} from "vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  css: ["@/assets/style.scss"],
+  css: [
+    'normalize.css',
+    "@/assets/style.scss",
+  ],
   typescript: {
     strict: true,
   },
@@ -35,4 +38,10 @@ export default defineNuxtConfig({
       }
     ],
   },
+  modules: [
+    '@element-plus/nuxt'
+  ],
+  elementPlus: {
+    // components: ['']
+  }
 });

@@ -3,6 +3,8 @@
 </script>
 
 <template>
-  Footer
+  <footer>
+    Footer
+  </footer>
 </template>
 

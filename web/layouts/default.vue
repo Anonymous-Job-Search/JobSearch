@@ -5,7 +5,7 @@
 <template>
 <!--  <NuxtWelcome/>-->
 
-  <Header />
+  <NavigationMainNavigation />
   <main>
     <NuxtPage />
   </main>
@@ -13,11 +13,12 @@
 </template>
 
 <style lang="scss">
-body {
+main {
+  padding-top: 80px;
   background: $base-bg;
 
-  @include media-breakpoint-up(sm) {
-    background: #141414;
+  @include media-breakpoint-up(md) {
+    background: #f11717;
   }
 }
 </style>

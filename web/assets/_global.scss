@@ -1,0 +1,12 @@
+.container {
+  max-width: 100%;
+  margin: auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+  @include media-breakpoint-up(md) {
+    max-width: $max-width;
+  }
+  @include media-breakpoint-up(l) {
+    padding: 0 60px;
+  }
+}
