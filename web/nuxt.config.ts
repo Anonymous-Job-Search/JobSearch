@@ -41,6 +41,19 @@ export default defineNuxtConfig({
   },
   modules: ['@element-plus/nuxt'],
   elementPlus: {
-    // components: ['']
+    components: [
+      'ElForm',
+      'ElFormItem',
+      'ELInput',
+      'ElSelect',
+      'ElOption',
+      'ElCol',
+      'ElTimePicker',
+      'ElSwitch',
+      'ElCheckBox',
+      'ElRadio',
+      'ElRadioGroup',
+      'ElButton',
+    ],
   },
 });

@@ -1,13 +1,26 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const menuList = ref([
+  {
+    url: '/',
+    label: 'main',
+  },
+  {
+    url: 'signup',
+    label: 'registration',
+  },
+]);
+</script>
 
 <template>
   <header class="main-navigation">
     <div class="container">
       <div class="main-navigation-logo">logo</div>
       <nav>
-        <ul class="main-navigation__list">
+        <ul v-for="item in menuList" :key="item.label" class="main-navigation__list">
           <li class="main-navigation__list-item">
-            <NuxtLink to="/registration"> registration </NuxtLink>
+            <NuxtLink :to="item.url">
+              {{ item.label }}
+            </NuxtLink>
           </li>
         </ul>
       </nav>
