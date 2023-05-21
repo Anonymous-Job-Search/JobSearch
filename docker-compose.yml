@@ -33,6 +33,13 @@ services:
     command: sh -c "pnpm i && pnpm dev --host 0.0.0.0 --port 8080"
     tty: true
     user: node
+    environment:
+      - HMR_HOST=0.0.0.0
+      - HMR_PROTOCOL=wss
+      - HMR_PATH=hmr
+      - HMR_PORT=8081
+      - HMR_CLIENT_PORT=443
+      - HMR_CLIENT_HOST=jobs.localhost
     volumes:
       - ./web:/home/node/app
     networks:

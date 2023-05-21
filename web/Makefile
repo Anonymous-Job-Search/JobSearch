@@ -4,6 +4,9 @@ up:
 down:
 	docker-compose down
 
+restart:
+	docker-compose restart web
+
 logs:
 	docker-compose logs -f web
 
