@@ -3,5 +3,3 @@
 <template>
   <div>ololo</div>
 </template>
-
-<style scoped></style>

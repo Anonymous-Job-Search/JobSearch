@@ -1,4 +1,5 @@
 @import 'media';
+
 /* main variables */
 $min-width: 320px;
 $base-bg: #efeef3;
@@ -9,31 +10,31 @@ $base-font-family: 'Roboto', sans-serif;
 $article-font-family: 'Roboto', sans-serif;
 $small-font-size: 13px;
 
-//transition
+// transition
 $default-transition: all 0.3s linear;
 $btn-transition: all ease 0.3s;
 
-//colors
-$white: #ffffff;
+// colors
+$white: #fff;
 $black: #141414;
 $violet: #100817;
 $grey: #e7e7e7;
-$grey_middle: #dddce6;
-$grey_blue_background: #efeef3;
-$grey_light: #efeef3;
-$grey_dark: #959595;
+$grey-middle: #dddce6;
+$grey-blue-background: #efeef3;
+$grey-light: #efeef3;
+$grey-dark: #959595;
 $red: #ec1c24;
-//gradients
 
-//shadows
+// gradients
 
-//hover colors
+// shadows
 
-//text, titles
+// hover colors
+
+// text, titles
 $text-color: $black;
 $title-color: $black;
 $title-font-family: $base-font-family;
-
 $font-size-h1: 35px;
 $line-height-h1: 50px;
 $font-size-h2: 30px;

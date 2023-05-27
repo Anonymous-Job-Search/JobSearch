@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive } from 'vue';
+import { reactive } from 'vue'
 
 // do not use same name with ref
 const form = reactive({
@@ -11,7 +11,7 @@ const form = reactive({
   type: [],
   resource: '',
   desc: '',
-});
+})
 </script>
 
 <template>
@@ -28,7 +28,12 @@ const form = reactive({
     </el-form-item>
     <el-form-item label="Activity time">
       <el-col :span="11">
-        <el-date-picker v-model="form.date1" type="date" placeholder="Pick a date" style="width: 100%" />
+        <el-date-picker
+          v-model="form.date1"
+          type="date"
+          placeholder="Pick a date"
+          style="width: 100%"
+        />
       </el-col>
       <el-col :span="2" class="text-center">
         <span class="text-gray-500">-</span>
@@ -58,7 +63,7 @@ const form = reactive({
       <el-input v-model="form.desc" type="textarea" />
     </el-form-item>
     <el-form-item>
-      <el-button type="primary" @click="">Create</el-button>
+      <el-button type="primary">Create</el-button>
       <el-button>Cancel</el-button>
     </el-form-item>
   </el-form>

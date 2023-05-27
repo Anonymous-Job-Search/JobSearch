@@ -1,6 +1,7 @@
-import { HmrOptions } from 'vite';
+import { HmrOptions } from 'vite'
 
-const toNumberOrUndefined = (value: string | undefined) => (undefined === value ? undefined : +value);
+const toNumberOrUndefined = (value: string | undefined) =>
+  undefined === value ? undefined : +value
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -12,7 +13,9 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "@/assets/variables/_variables.scss" as *;',
+          additionalData: `
+            @import "@/assets/variables/_variables.scss";
+          `,
         },
       },
     },
@@ -24,7 +27,7 @@ export default defineNuxtConfig({
           path: process.env.HMR_PATH,
           port: toNumberOrUndefined(process.env.HMR_PORT),
           clientPort: toNumberOrUndefined(process.env.HMR_CLIENT_PORT),
-        } as HmrOptions).filter(([_, value]) => value !== undefined),
+        } as HmrOptions).filter(([_, value]) => value !== undefined)
       ),
     },
     plugins: [
@@ -33,13 +36,13 @@ export default defineNuxtConfig({
         transform(code, id) {
           // https://github.com/vitejs/vite/issues/8666
           if (process.env.HMR_CLIENT_HOST && id.endsWith('dist/client/client.mjs')) {
-            return code.replace('__HMR_HOSTNAME__', JSON.stringify(process.env.HMR_CLIENT_HOST));
+            return code.replace('__HMR_HOSTNAME__', JSON.stringify(process.env.HMR_CLIENT_HOST))
           }
         },
       },
     ],
   },
-  modules: ['@element-plus/nuxt'],
+  modules: ['@element-plus/nuxt', '@nuxtjs/eslint-module', '@nuxtjs/stylelint-module'],
   elementPlus: {
     components: [
       'ElForm',
@@ -56,4 +59,4 @@ export default defineNuxtConfig({
       'ElButton',
     ],
   },
-});
+})

@@ -8,7 +8,7 @@ const menuList = ref([
     url: 'signup',
     label: 'registration',
   },
-]);
+])
 </script>
 
 <template>
@@ -35,6 +35,7 @@ const menuList = ref([
   left: 0;
   width: 100%;
   background-color: $grey;
+
   &__list {
     list-style: none;
   }
