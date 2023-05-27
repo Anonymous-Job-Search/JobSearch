@@ -1,13 +1,13 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>
-    <NavigationMainNavigation />
-    <main>
-      <NuxtPage />
-    </main>
-    <BaseFooter />
-  </div>
+  <!--  <NuxtWelcome/>-->
+
+  <NavigationMainNavigation />
+  <main>
+    <NuxtPage />
+  </main>
+  <AppBaseFooter />
 </template>
 
 <style lang="scss">
@@ -16,7 +16,7 @@ main {
   background: $base-bg;
 
   @include media-breakpoint-up(md) {
-    background: $grey-dark;
+    background: #f11717;
   }
 }
 </style>

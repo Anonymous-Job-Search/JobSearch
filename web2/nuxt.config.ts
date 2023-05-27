@@ -43,6 +43,12 @@ export default defineNuxtConfig({
     ],
   },
   modules: ['@element-plus/nuxt', '@nuxtjs/eslint-module', '@nuxtjs/stylelint-module'],
+  eslint: {
+    lintOnStart: false,
+  },
+  stylelint: {
+    lintOnStart: false,
+  },
   elementPlus: {
     components: [
       'ElForm',
